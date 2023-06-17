@@ -1,0 +1,41 @@
+{% extends "Base.html" %}
+
+{% block content %}
+    <style>
+    input{
+        width: 400px
+    }
+</style>
+<section class="h-100 h-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">About Me</h3>
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                  <p>
+                      {{ form.phone.label }}<br>
+                      {{ form.phone(size=11)}}
+                  </p>
+                  <p>
+                      {{ form.description.label }}<br>
+                      {{ form.description(size=200)}}
+                  </p>
+                <p>
+                      {{ form.email.label }}<br>
+                      {{ form.email(size=64)}}
+                  </p>
+              <p>{{ form.submit() }}</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

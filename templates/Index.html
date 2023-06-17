@@ -1,0 +1,17 @@
+{% extends "Base.html" %}
+
+{% block content %}
+<h2 style="color: #eeeeee">Some rules for using website</h2>
+    {% for post in posts %}
+    <div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ post.head }}</li>
+    <li class="list-group-item">{{ post.author.username }}</li>
+    <li class="list-group-item">{{ post.body }}</li>
+  </ul>
+  <div class="card-footer">
+     Add a lot of friends
+  </div>
+</div>
+    {% endfor %}
+{% endblock %}
